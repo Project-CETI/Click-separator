@@ -151,14 +151,14 @@ function [trajectories,id_j_ToAs]=run_train(Detections,Buffer_Params,test,F_ds,r
             [ref_ToAs,~]=determine_reflection_ToAs(test,sol,0,roi,F_ds,0);
             Slant=ref_ToAs;   
             subplot(2,2,4);
-            dotH=plot(sol,Slant,'*','LineWidth',2);  hold on;
+            dotH=plot(sol,Slant,'*','LineWidth',2);  hold on; grid on;
             pause(0.01);
-            set(dotH, 'XData', sol, 'YData', Slant); hold on;
+            set(dotH, 'XData', sol, 'YData', Slant); hold on; grid on;
             subplot(2,2,1); hold on;
             Pks=Peaks_extract(test,sol,F_ds);   
-            dotH3=plot(sol',Pks,'*','LineWidth',2);  hold on;
+            dotH3=plot(sol',Pks,'*','LineWidth',2);  hold on; grid on;
             pause(0.01);
-            set(dotH3, 'XData', sol, 'YData', Pks); hold on;
+            set(dotH3, 'XData', sol, 'YData', Pks); hold on; grid on;
         end
         
        

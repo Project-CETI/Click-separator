@@ -225,7 +225,7 @@ Eval_flag=1;
                     subplot(2,1,2); hold off;
                 end
                 % roi=15e-3; 
-                cd('C:\Users\User\Desktop\source separation\Annotaion_GUI\functions')
+                % cd('C:\Users\User\Desktop\source separation\Annotaion_GUI\functions')
                 % [ref_ToAs,~]=determine_reflection_ToAs(buffer,locs,0,roi,F_ds,0);
                 if plot_flag
                     plot(t1+locs,ref_ToAs,'kx','LineWidth',2);
@@ -469,7 +469,7 @@ Eval_flag=1;
                     % end
                 end
             
-                cd('C:\Users\User\Desktop\source separation\Annotaion_GUI\functions')
+                % cd('C:\Users\User\Desktop\source separation\Annotaion_GUI\functions')
                 % Detected_subtrains={GT_1,GT_2,GT_3,GT_4};
                 % Detected_refs={GT_1_ref,GT_2_ref,GT_3_ref,GT_4_ref};
                 % Detected_subtrains = Detected_subtrains(~cellfun(@isempty, Detected_subtrains));

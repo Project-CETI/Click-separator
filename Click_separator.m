@@ -17,13 +17,14 @@ cd(PF)
  load F_weights
 
  %% Default parameters
-
- Buffer_length=3;    % Analysis buffer length [sec] 
- lone_p=20;          % Lone penalty (used for click train formation)      
- ITI_min=-4;         % minimum allowed time gap (Inter-train interval (ITI)) between click trains [sec]
- ITI_max=30;         % maximum allowed time gap (Inter-train interval (ITI)) between click trains [sec]
- Amplitude_lim=8e-3; % minimum allowed signal amplitude
- roi=16e-3;          % region of interest (roi)- defines the time window [in sec] around clicks for analyzing their surface echo
+ c=1520;                     % Measured sound speed (in [m/sec])
+ Receiver_Depth=15;          % Hydrophone depth (in [m])
+ roi=2*Receiver_Depth/c;     % region of interest (roi)- defines the time window [in sec] around clicks for analyzing their surface echo
+ Buffer_length=3;            % Analysis buffer length [sec] 
+ lone_p=20;                  % Lone penalty (used for click train formation)      
+ ITI_min=3;                 % minimum allowed time gap (Inter-train interval (ITI)) between click trains [sec]
+ ITI_max=30;                 % maximum allowed time gap (Inter-train interval (ITI)) between click trains [sec]
+ Amplitude_lim=8e-3;         % minimum allowed signal amplitude
 
 %% Run on selected files
 
@@ -43,7 +44,7 @@ for fi=1:length(Files)
         figure('units','normalized','outerposition',[0 0 1 1]) 
         subplot(2,2,1);
         plot(t_test,test); hold on;
-        xlabel('time [sec]'); ylabel('Voltage [v]');  
+        xlabel('time [sec]'); %ylabel('Voltage [v]');  
         XL = get(gca, 'XLim'); xlim(XL); 
                 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% run separation algorithm %%%%%%%%%%%%%%%%%%%%%%%%

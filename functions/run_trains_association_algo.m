@@ -161,7 +161,7 @@ function Whale=run_trains_association_algo(trajectories,id_j_ToAs,ITI_min,ITI_ma
     subplot(2,2,3);
     xlabel('Time [sec]');
     ylabel('Slant delay [ms]');
-    title('Click train attribution');
+    title('Click train source assignment');
 
     subplot(2,2,1);
     xlabel('Time [sec]');
