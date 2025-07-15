@@ -2,6 +2,8 @@
 
 This MATLAB program detects and separates **sperm whale echolocation clicks**, clustering them by individual whales.
 
+> ⚠️ **Note**: This version currently works **only on Windows operating systems** due to the compiler and MEX configuration.
+
 ---
 
 ### ⚙️ Requirements
@@ -36,3 +38,5 @@ mex mcc4mot.c
 - The results are also automatically saved to a **CSV file** with the same name as the input audio file.
 
 ---
+
+Feel free to open an issue or contribute if you find this tool useful for your acoustic analysis work!
