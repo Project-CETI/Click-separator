@@ -85,12 +85,9 @@ excess_flow = 0;
 % low = [low, 0];
 % acap = [acap, n];
 % call the manipulated cs2 function for min-cost circulation
-tic;
-C_Folder=pwd;
-cd('C:\Users\User\Desktop\source separation\Annotaion_GUI\functions')
+
 [cost_all,~,~,~, track_vec] = cinda_mex(scale, num_node, num_arc, excess_node, excess_flow, tail, head, low, acap, cost);
-cd(C_Folder)
-toc;
+
 % handle the null set
 if cost_all >= 0 || isempty(track_vec)
     warning(['Null trajectory set! Please check the cost design. ',...
