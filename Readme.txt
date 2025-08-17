@@ -14,7 +14,8 @@ This MATLAB program detects and separates **sperm whale echolocation clicks**, c
 #### One-time compilation step:
 Open the MATLAB Command Window and run:
 ```matlab
-mex mcc4mot.c
+mex -setup
+mex cinda_mex.c
 ```
 
 ---
